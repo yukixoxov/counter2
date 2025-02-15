@@ -25,3 +25,11 @@
     opacity: 0.8;
     transition: opacity .25s;
 }
+
+.prime {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000;
+}
