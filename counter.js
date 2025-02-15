@@ -1,6 +1,11 @@
 (() => {
     const $counter = document.getElementById("js-counter");
 
+    function audio() {
+        document.getElementById("button-audio").currentTime = 0; //連続クリックに対応
+        document.getElementById("button-audio").play(); //クリックしたら音を再生
+    }
+
     // まず素数判定関数を定義
     const primeNumber = (num) => {
         // 素数判定関数
@@ -16,7 +21,7 @@
 
     // clickHandler関数を定義
     const clickHandler = (e) => {
-        // クリックされたボタンを取得
+        audio();
         // ボタンのテキストから操作を判断して値を更新
         const operation = e.currentTarget.textContent; // クリックされたボタンのテキストを取得
         const value = operation.includes("10") ? 10 : 1; // 10の場合は10、それ以外は1
